@@ -58,6 +58,7 @@ body{
   overflow: hidden;
   height: 100%;
 	margin:0;
+  
 }
 
 .active{
@@ -72,30 +73,244 @@ body{
 
 
 
-.mybtn{
-  padding: 10px 15px;
-  margin: 100px;
-  background:red;
-  position: absolute;
-  display: inline-block;
-  z-index: 22;
+
+
+.hover{
+           webkit-transition: -webkit-transform 0.25s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+    transition: transform 0.25s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+    width: auto;
+    opacity: 1;
+    transform: translateX(-35px);
+    pointer-events: none;
+        }
+
+#menu{
+    left:32px;
+    position: fixed;
+    z-index: 100;
+    margin-top: -125px;
+    top: 50%;
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+
+  ul.nav{
+        margin: 0;
+    padding: 0;
+    list-style: none;
+      li{
+        display: block;
+        box-sizing: content-box;
+        -webkit-box-sizing: content-box;
+        position: relative;
+        cursor: pointer;
+        
+        &:hover{
+          a span{
+                -webkit-animation: animNavModalAllHover .35s ease-in-out forwards;
+    -ms-animation: animNavModalAllHover .35s ease-in-out forwards;
+    animation: animNavModalAllHover .35s ease-in-out forwards;
+          }
+
+          .right{
+            .right-inner{
+              span{
+                    opacity: 1;
+    -webkit-transition: all 0.2s cubic-bezier(0,.44,.41,.99);
+    transition: all 0.2s cubic-bezier(0,.44,.41,.99);
+              }
+              webkit-transition: -webkit-transform 0.25s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+          transition: transform 0.25s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+          width: auto;
+          opacity: 1;
+          transform: translateX(35px);
+          pointer-events: none;
+            }
+          }
+          
+        }
+        a{
+          padding: 8px 17px;
+          display: block;
+          position: relative;
+          z-index: 1;
+          width: 100%;
+          height: 100%;
+          cursor: pointer;
+          text-decoration: none;
+
+          span{
+            transform: rotate(-90deg);
+            z-index: 1;
+            left: 25%;
+            top: 4px;
+            display: block;
+            color:#959595;
+            font-size: 24px;
+            font-family: SegoeUISemiBold;
+            &::after{
+              display: block;
+              position: absolute;
+              content: '';
+              top: 0;
+              right: -5555px;
+              width: 100%;
+              height: 100%;
+              border-radius: 18px 18px;
+              opacity: 1;
+              background-color: #fff;
+              -webkit-transform: scale(.4);
+              -ms-transform: scale(.4);
+              transform: scale(.4);
+              -webkit-transition: opacity .25s ease-out,-webkit-transform .25s ease-out;
+              -ms-transition: opacity .25s ease-out,-ms-transform .25s ease-out;
+              transition: opacity .25s ease-out,transform .25s ease-out;
+
+            }
+          }
+             
+              
+        }
+        .right{
+            overflow: hidden;
+            left: 50px;
+            top: 8px;
+            position: absolute;
+            width: 250px;
+            pointer-events: none;
+            height: 26px;
+          
+
+           .right-inner{
+              position: absolute;
+              top: -3px;
+              color:#959595;
+                  font-family: SegoeUIRegular;
+                  font-size: 18px;
+              line-height: 36px;
+              white-space: nowrap;
+              max-width: 220px;
+              display: block;
+              left: 0;
+              width: auto;
+              pointer-events: none;
+              transform: translateX(10px);
+              -webkit-transform: translateX(10px);
+              cursor: pointer;
+
+              /*
+
+              -webkit-transition: -webkit-transform 0.2s cubic-bezier(.4,0,1,.44);
+              transition: transform 0.2s cubic-bezier(.4,0,1,.44);
+              */
+
+
+
+
+
+              &::after{
+                  width: 100%;
+                  height: 1px;
+                  display: block;
+                  content: ' ';
+                  left: -150%;
+                  opacity: 1!important;
+                  top: 50%;
+                  margin-left: -13px;
+                  position: absolute;
+                  border-bottom: 1px solid #959595;
+                  transform: translateX(50%);
+                  -webkit-transform: translateX(50%);
+              }
+             span{
+                  
+                  opacity: 0;
+                  -webkit-transition: all 0.2s cubic-bezier(.4,0,1,.44);
+                   transition: all 0.2s cubic-bezier(.4,0,1,.44);
+
+             }
+         
+           }
+        }
+             
+      }
+    }
+
 }
 
 
-.next{
-  position:absolute;
-  z-index: 10;
+
+.toTop{   
+  transition: 0.5s ease-out !important;
+  top:0px !important;
 }
 
-.prew{
-  position:absolute;
-  z-index: 10;
-  margin-top: 50px;
-} 
+.ind{
+
+}
+
+
 
 #main{
   z-index: 1;
-  #bg{
+  .logo{
+      position:relative;
+      float: left;
+      margin-top: 150px;
+    }
+    
+
+
+    .name{
+
+      margin-left: 18px;
+      float: left;
+      margin-top: 245px;
+      font-family: SegoeUIRegular;
+      font-size: 18px;
+     
+      .nameB{
+        
+        font-family: SegoeUIBold;
+        font-size: 36px;
+      }
+      p{margin:0;
+        color: rgb( 255, 255, 255 );
+      text-shadow: 1px 1.732px 2px rgba( 0, 0, 0, 0.18);}
+
+      .line{
+        height: 3px;
+        width: 70px;
+        background-color:#f9ba48;
+        margin-top: 10px;
+      }
+    }
+  .bg{
+
+    background:#3e3e3e;
+    transform: scale(1);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-position: left top;
+    background-size:cover;
+    background-repeat: no-repeat;
+  }
+      visibility: visible;
+    top: 0px;
+   
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: none;
+    will-change: auto;
+    opacity: 1;
+}
+
+
+
+#who{
+  z-index: 1;
+  .bg{
 
     
     transform: scale(1);
@@ -120,44 +335,11 @@ body{
     opacity: 1;
 }
 
-
-ul.nav{
-     
-
-     position:absolute;
-    z-index: 100;
-      
-      margin-top: 180px;
-      margin-left: 50px;
-      li{
-          color:#959595;
-          font-family: SegoeUISemiBold;
-          font-size: 24px;
-
-        a{
-          &:hover{color:#fff;}
-          text-transform: uppercase;
-          font-size: 12px;
-          text-decoration: none;
-          color:#959595;
-        }
-      }
-    }
-
-.toTop{   
-  transition: 0.5s ease-out !important;
-  top:0px !important;
-}
-
-.ind{
-
-}
-
-#second{
+#portfolio{
   z-index: 1;
  
   
-  #bg{
+  .bg{
 
     
     transform: scale(1);
@@ -181,4 +363,89 @@ ul.nav{
     opacity: 1;
 }
 
+#services{
+  z-index: 1;
+ 
+  
+  .bg{
+
+    
+    transform: scale(1);
+    width: 100%;
+    height: 100%;
+    
+    position: absolute;
+  
+    background: url('../img/tiger.jpg');
+    background-position: left top;
+    background-size:cover;
+    background-repeat: no-repeat;
+  }
+      visibility: visible;
+   width: 100%;
+   height: 100%;
+    top: 0px;
+    position: absolute;
+    transition: none;
+    will-change: auto;
+    opacity: 1;
+}
+
+
+
+#command{
+  z-index: 1;
+ 
+  
+  .bg{
+
+    
+    transform: scale(1);
+    width: 100%;
+    height: 100%;
+    
+    position: absolute;
+  
+    background: url('../img/nature.jpg');
+    background-position: left top;
+    background-size:cover;
+    background-repeat: no-repeat;
+  }
+      visibility: visible;
+   width: 100%;
+   height: 100%;
+    top: 0px;
+    position: absolute;
+    transition: none;
+    will-change: auto;
+    opacity: 1;
+}
+
+#order{
+  z-index: 1;
+ 
+  
+  .bg{
+
+    
+    transform: scale(1);
+    width: 100%;
+    height: 100%;
+    
+    position: absolute;
+  
+    background: url('../img/puls.jpg');
+    background-position: left top;
+    background-size:cover;
+    background-repeat: no-repeat;
+  }
+      visibility: visible;
+   width: 100%;
+   height: 100%;
+    top: 0px;
+    position: absolute;
+    transition: none;
+    will-change: auto;
+    opacity: 1;
+}
 
