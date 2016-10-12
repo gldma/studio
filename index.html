@@ -6,6 +6,8 @@
 	<title>Ëó÷øàÿ â ìèðå ñòóäèÿ</title>
 	<link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
+	<link href="css/team.css" rel="stylesheet">
+	<link href="css/swiper.css" rel="stylesheet">
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="js/script.js"></script>
@@ -82,6 +84,70 @@
 
 <section id="command" class="ind">
 	<div class="bg"></div>
+	<div class="container"><div class="row">
+	<div class="our_team">
+						<!-- Swiper -->
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+
+
+								<div class="swiper-slide">
+									<div class="hover panel">
+					          <div class="front" style="background-color: rgb(10, 10, 10); background-image: url('https://pp.vk.me/c628422/v628422469/2bfdb/svRIdSMRp4M.jpg'); min-height: 300px; height: auto;">
+					          	
+					            <div class="box1">
+					              <p>Дима</p>
+					            </div>
+					          </div>
+					          <div class="back" style="background-color: rgb(10, 10, 10); background-image: url('https://pp.vk.me/c625430/v625430469/3c38e/VLWkN2G556M.jpg'); min-height: 300px; height: auto;">
+					            <div class="box1">
+					              <p>Smooth</p>
+					            </div>
+					          </div>
+					        </div>
+								</div>
+
+								<div class="swiper-slide">
+									<div class="hover panel">
+					          <div class="front" style="background-color: rgb(10, 10, 10); background-image: url('https://pp.vk.me/c310425/v310425846/6ece/b_vpu961F8I.jpg'); min-height: 300px; height: auto;">
+					            <div class="box1">
+					              <p>Саня</p>
+					            </div>
+					          </div>
+					          <div class="back" style="background-color: rgb(10, 10, 10); background-image: url('https://pp.vk.me/c622631/v622631846/3305d/0elytxS6d7Q.jpg'); min-height: 300px; height: auto;">
+					            <div class="box1">
+					              <p>Тащер</p>
+					            </div>
+					          </div>
+					        </div>
+								</div>
+
+								<div class="swiper-slide">
+									<div class="hover panel">
+					          <div class="front" style="background-color: rgb(10, 10, 10); background-image: url('https://pp.vk.me/c627731/v627731034/105ea/6uLVXMp0JJ4.jpg'); min-height: 300px; height: auto;">
+					            <div class="box1">
+					              <p>Макс</p>
+					            </div>
+					          </div>
+					          <div class="back" style="background-color: rgb(10, 10, 10); background-image: url('https://pp.vk.me/c625429/v625429034/2d15a/DKcoKJ8eyNQ.jpg'); min-height: 300px; height: auto;">
+					            <div class="box1">
+					              <p>Барских</p>
+					            </div>
+					          </div>
+					        </div>
+								</div>
+
+
+
+							</div>
+							<!-- Add Pagination -->
+							<div class="swiper-pagination"></div>
+
+							<!-- Add Pagination -->
+							<div class="swiper-pagination"></div>
+						</div>
+					</div>
+					</div></div>
 </section>
 
 <section id="order" class="ind">
@@ -92,7 +158,27 @@
 
 
 
-	
+<!-- Swiper JS -->
+	<script src="js/swiper/swiper.min.js"></script>
+
+	<!-- Initialize Swiper -->
+	<script>
+    var swiper = new Swiper('.our_team .swiper-container', {
+        pagination: '.swiper-pagination',
+        slidesPerView: 3,
+        paginationClickable: true,
+        spaceBetween: 30
+    });
+
+    	$(document).ready(function(){
+
+	$('.hover').hover(function(){
+			$(this).addClass('flip');
+		},function(){
+			$(this).removeClass('flip');
+		});
+	});
+    </script>	
 </body>
 
 

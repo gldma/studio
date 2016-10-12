@@ -1,0 +1,171 @@
+#command {
+ 
+
+  .block_header_text {
+    h2 {
+          font-family: Arial;
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 300;
+    text-align:center;
+    }
+  }
+
+  .divider-wrap {
+        background: #39dfa5;
+    background: linear-gradient(to right, #39dfa5, #1fbdf2);
+     
+        margin:15px auto;
+    width: 120px;
+    height: 3px;
+
+    transform: scale(1, 1);
+    visibility: visible;
+  }
+
+  .block_small_header_text {
+      font-size: 20px;
+    line-height: 50px;
+    font-weight: 300;
+    text-align:center;
+    color:#999;
+  }
+
+  .our_team {
+    height:400px;
+    margin-top:50px;
+     
+
+    .swiper-wrapper {
+      height:400px;
+      padding-top:50px;
+    }
+
+    .swiper-slide {
+      
+          .panel {
+            margin: 0 auto;
+            height: 300px;  
+            background: none;
+            position: relative;
+            -webkit-perspective: 600px;
+            -moz-perspective: 600px;
+
+          /*  &:hover {
+              .front {
+                   z-index: 900;
+          -webkit-transform: rotateY(180deg);
+          -moz-transform: rotateY(180deg);
+              }
+
+              .back {
+                     z-index: 1000;
+          -webkit-transform: rotateX(0deg) rotateY(0deg);
+          -moz-transform: rotateX(0deg) rotateY(0deg);
+              }
+            }*/
+          }
+
+          .panel .front,
+          .panel .back {
+            text-align: center;
+            &:before {
+              position:absolute;
+              z-index:0;
+              content:"";
+              background:#000;
+              opacity:0.4;
+              width:100%;
+              height:100%;
+              top:0;
+              left:0;
+            }
+          }
+            
+        .panel .front {
+          height: inherit;
+          position: absolute;
+          top: 0;
+          background-position: center;
+          background-size:cover;
+              width: 100%;
+          z-index: 900;
+          text-align: center;
+          -webkit-transform: rotateX(0deg) rotateY(0deg);
+             -moz-transform: rotateX(0deg) rotateY(0deg);
+          -webkit-transform-style: preserve-3d;
+             -moz-transform-style: preserve-3d;
+            -webkit-backface-visibility: hidden;
+             -moz-backface-visibility: hidden;
+             backface-visibility: hidden;
+          -webkit-transition: all .4s ease-in-out;
+             -moz-transition: all .4s ease-in-out;
+            -ms-transition: all .4s ease-in-out;
+             -o-transition: all .4s ease-in-out;
+              transition: all .4s ease-in-out;
+        }
+
+        .panel .back {
+          height: inherit;
+          position: absolute;
+          top: 0;
+          background-position: center;
+          background-size:cover;
+              width: 100%;
+          z-index: 1000;
+          -webkit-transform: rotateY(-180deg);
+             -moz-transform: rotateY(-180deg);
+          -webkit-transform-style: preserve-3d;
+             -moz-transform-style: preserve-3d;
+          -webkit-backface-visibility: hidden;
+             -moz-backface-visibility: hidden;
+             backface-visibility: hidden;
+          -webkit-transition: all .4s ease-in-out;
+             -moz-transition: all .4s ease-in-out;
+            -ms-transition: all .4s ease-in-out;
+             -o-transition: all .4s ease-in-out;
+              transition: all .4s ease-in-out;
+
+             
+        }
+        .panel.flip .front {
+          z-index: 900;
+          -webkit-transform: rotateY(180deg);
+          -moz-transform: rotateY(180deg);
+
+        }
+        .panel.flip .back {
+          z-index: 1000;
+          -webkit-transform: rotateX(0deg) rotateY(0deg);
+          -moz-transform: rotateX(0deg) rotateY(0deg);
+
+        }
+
+        .box1{
+          color:#fff;
+      
+       
+            transform: translateY(-50%) translateZ(60px) scale(.88);
+          /* -webkit-transform: translateY(-50%) translateZ(60px) scale(.88); */
+          -ms-transform: translateY(-50%) translateZ(60px) scale(.88);
+          top: 50%;
+          -webkit-backface-visibility: hidden;
+             -moz-backface-visibility: hidden;
+             backface-visibility: hidden;
+           position: absolute;
+          left: 0;
+          width: 100%;
+          padding: 60px;
+          outline: 1px solid transparent;
+          -webkit-perspective: inherit;
+          perspective: inherit;
+          
+        }
+       
+      }
+
+
+
+}
+
+}

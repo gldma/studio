@@ -75,14 +75,7 @@ body{
 
 
 
-.hover{
-           webkit-transition: -webkit-transform 0.25s cubic-bezier(0.165, 0.840, 0.440, 1.000);
-    transition: transform 0.25s cubic-bezier(0.165, 0.840, 0.440, 1.000);
-    width: auto;
-    opacity: 1;
-    transform: translateX(-35px);
-    pointer-events: none;
-        }
+
 
 #menu{
     left:32px;
